@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var N = parseInt(prompt('Digite o numero de casos.'))
+        var somaDivisores = 0
+
+        if (N >= 1 && N <= 20) {
+            for (var i = 1; i <= N; i++){
+                var X = parseInt(prompt('Digite um numero inteiro.'))
+                if (X >= 1 && X <= 10**8) {
+                    for (var cont = 1; cont < X; cont++){
+                        if (X%cont == 0) {
+                            somaDivisores += cont
+                        }
+                    }
+                    if(somaDivisores == X) {
+                        console.log(`${X} eh perfeito`)
+                        somaDivisores = 0
+                    } else {
+                        console.log(`${X} nao eh perfeito`)
+                        somaDivisores = 0
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
