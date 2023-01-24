@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let N = parseInt(prompt('Digite o valor para fatorial.'))
+        let fatorial = 1
+        if (N <= 0 || N >= 13) {
+            console.log('Valor inválido')
+        } else {
+            for(let i = N; i >= 1; i--) {
+                fatorial *= i
+            }
+            console.log(fatorial)
+        }
+
+        /*
+        let N = parseInt(prompt('Digite o valor para fatorial.'))
+        function fatorial(N) {
+            if(N == 0 || N > 12) {
+                return 'Valor inválido'
+            }
+            if (N > 0) {
+                return N * fatorial(N - 1)
+            }
+        }
+        console.log(fatorial(N))
+        */
+    </script>
+</body>
+</html>

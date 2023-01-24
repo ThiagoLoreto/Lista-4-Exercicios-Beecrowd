@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let [A, B] = prompt('Digite os gols do jogo Inter e Grêmio.').split(' ').map(Number)
+        let inter = 0
+        let gremio = 0
+        let empate = 0
+        let grenais = 1
+
+        for(let i = 1; i < 3; i++){
+            let novoJogo = parseInt(prompt('Novo grenal (1-sim 2-nao)'))
+            if(novoJogo == 2) {
+                if(A > B) {
+                    inter++
+                }
+                if(B > A) {
+                    gremio++
+                }
+                if(B == A) {
+                    empate++
+                }
+                console.log(grenais + ' grenais')
+                console.log('Inter: ' + inter)
+                console.log('Gremio: ' + gremio)
+                console.log('Empates: ' + empate)
+                if(inter > gremio && inter > empate) {
+                    console.log('Inter venceu mais')
+                }
+                if(gremio > inter && gremio > empate) {
+                    console.log('Gremio venceu mais')
+                } 
+                if (gremio == inter) {
+                    console.log('Nao houve vencedor')
+                }
+                i += 4
+            }
+            if(novoJogo == 1) {
+                let [C, D] = prompt('Digite os gols do jogo Inter e Grêmio.').split(' ').map(Number)
+                if(C > D) {
+                    inter++
+                }
+                if(D > C) {
+                    gremio++
+                }
+                if(D == C) {
+                    empate++
+                }
+                grenais++
+                i--
+            }
+        }
+    </script>
+</body>
+</html>
