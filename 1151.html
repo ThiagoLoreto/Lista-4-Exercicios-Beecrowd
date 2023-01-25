@@ -15,18 +15,24 @@
         for (let i = 1; i <= N; i++) {
             if (N == 1) {
                 console.log(0)
+                i += N +3
             }
             if (N == 2) {
                 console.log(0, 1)
+                i += N +3
             }
             if (N == 3) {
                 console.log(0, 1, 1)
+                i += N +3
             }
             if (i > 3) {
                 vetor[i-1] = vetor[i-2] + vetor[i-3]
             }
+            if(i == N) {
+                vetor[i] = vetor[i-1] + vetor[i-2]
+                console.log(vetor.join(', '))
+            }
         }
-        console.log(vetor.join(', '))
     </script>
 </body>
 </html>
